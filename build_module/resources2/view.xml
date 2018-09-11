@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+        <!-- @@model_class@@ (search) -->
+        <record model="ir.ui.view" id="@@model_prefix_view@@_search_view">
+            <field name="name">@@prefix_name@@.@@model_name@@.search</field>
+            <field name="model">@@prefix_name@@.@@model_name@@</field>
+            <field name="arch" type="xml">
+                <search string="@@model_name_view@@">
+                    <!-- Filters -->
+                    <separator/>
+
+                    <!-- Searches -->
+                    <field name="name" select="1" />
+                    <field name="description" select="1" />
+
+                    <!-- GroupBy -->
+                </search>
+            </field>
+        </record>
+
+        <!-- @@model_class@@ (tree) -->
+        <record model="ir.ui.view" id="@@model_prefix_view@@_tree_view">
+            <field name="name">@@prefix_name@@.@@model_name@@.tree</field>
+            <field name="model">@@prefix_name@@.@@model_name@@</field>
+            <field name="arch" type="xml">
+                <tree string="@@model_name_view@@">
+                    <field name="sequence" widget="handle" />
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- @@model_class@@ (form) -->
+        <record model="ir.ui.view" id="@@model_prefix_view@@_form_view">
+            <field name="name">@@prefix_name@@.@@model_name@@.form</field>
+            <field name="model">@@prefix_name@@.@@model_name@@</field>
+            <field name="arch" type="xml">
+                <form string="@@model_name_view@@">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <span class="oe_inline">@@model_name_view@@</span>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="sequence"/>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- @@model_class@@ (action) -->
+        <record id="@@model_prefix_view@@_action" model="ir.actions.act_window">
+            <field name="name">@@model_name_view@@</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">@@prefix_name@@.@@model_name@@</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

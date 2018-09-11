@@ -1,0 +1,62 @@
+# Init
+init_package_already_setup: "The package has already been set. Enter \"build_module update\" to update the package."
+init_package_not_setup: "The package has not been set yet. Enter \"build_module setup \" to set it up."
+
+# Update
+update_get_language: "Enter the language of the package "
+update_cur_language: "The current language is: "
+update_get_addons_path: "Enter the addons path of your Odoo "
+update_cur_addons_path: "The current addons path Odoo is: "
+update_no_arg: "Invalid argument. Arguments available: "
+
+# Remove
+remove_config: "You are about to delete the configuration files from the package."
+remove_are_you_sure: "Are you sure you want to do that?"
+remove_config_file_removed: "Configuration files have been removed."
+
+# Create
+create_are_you_sure: "Would you create a new module in the directory"
+create_bad_argument: "Invalid \"{}\" argument."
+
+# Tools
+tools_yes_no: "[yes (y), no (n)]"
+tools_bad_argument: "Invalid argument. Enter \"build_module help\" for more information."
+
+# Module
+module_name: "Module name: "
+module_dir_name: "Directory name (separator:\"_\"): "
+module_prefix_class: "Class prefix (CamelCase): "
+module_prefix_name: "\"_name\" prefix (separator:\".\"): "
+module_summary: "Short description: "
+module_description: "Description: "
+module_version: "Version: "
+module_category: "Category: "
+module_author: "Author: "
+module_email: "E-mail address: "
+module_website: "Website: "
+module_depends: "Dependencies: "
+module_not_found: "Module \"{}\" is not found."
+module_already_exists: "Module \"{}\" already exists."
+module_no_name: "No module name specified."
+module_specify_name: "Please specify the module name."
+module_specify_dir_name: "Please specify the directory name."
+module_specify_prefix_class: "Please specify the class prefix."
+module_specify_prefix_name: "Please specify the prefix oh the variable \"_name\"."
+module_no_addon_path: "No addons path found in the configuration file."
+module_canceld: "Module creation canceled."
+
+# Model
+model_class: "Model class name (CamelCase): "
+model_name: "Model \"_name\" name (separator:\".\"): "
+model_description: "Model description: "
+model_name_view: "Name displayed in the model views: "
+model_already_exist: "Model \"{}\" already exists."
+
+# Model inherited
+model_inherited_class: "Inherited model class name (CamelCase): "
+model_inherited_name: "Inherited model \"_inherit_id\" (separator:\".\"): "
+model_inherited_info_view: "XML ID of inherited views (complete to add to the view or keep empty)"
+model_inherited_view_search: "XML ID search view: "
+model_inherited_view_tree: "XML ID tree view: "
+model_inherited_view_form: "XML ID form view: "
+model_inherited_already_exist: "Inherited model \"{}\" already exists."

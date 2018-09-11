@@ -1,0 +1,6 @@
+# MANIFEST.in
+
+include *.txt
+#recursive-include docs *.txt
+recursive-include build_module/languages *.yml
+recursive-include build_module/resources *

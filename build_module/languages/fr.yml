@@ -1,0 +1,62 @@
+# Init
+init_package_already_setup: "Le paquet a déjà été paramétré. Entrer \"build_module update\" pour mettre à jour le paquet."
+init_package_not_setup: "Le paquet n'a pas encore été paramétré. Entrer \"build_module setup\" pour le paramétrer."
+
+# Update
+update_get_language: "Entrer la langue du paquet "
+update_cur_language: "Le langage actuel est: "
+update_get_addons_path: "Entrez le chemin de modules de votre Odoo "
+update_cur_addons_path: "Le chemin de modules Odoo actuel est: "
+update_no_arg: "Argument invalide. Arguments valides: "
+
+# Remove
+remove_config: "Vous êtes sur le point de supprimer les fichiers de configuration du paquet."
+remove_are_you_sure: "Êtes-vous sûr de vouloir faire ça?"
+remove_config_file_removed: "Les fichiers de configuration ont été supprimé."
+
+# Create
+create_are_you_sure: "Souhaitez-vous créer un nouveau module dans le dossier"
+create_bad_argument: "Argument \"{}\" invalide."
+
+# Tools
+tools_yes_no: "[yes (y), no (n)]"
+tools_bad_argument: "Argument invalide. Entrer \"build_module help\" pour plus d'informations."
+
+# Module
+module_name: "Nom du module: "
+module_dir_name: "Nom du dossier (séparateur:\"_\"): "
+module_prefix_class: "Préfixe de classe (CamelCase): "
+module_prefix_name: "Préfixe de \"_name\" (séparateur:\".\"): "
+module_summary: "Description courte: "
+module_description: "Description: "
+module_version: "Version: "
+module_category: "Catégorie: "
+module_author: "Auteur: "
+module_email: "Adresse mail: "
+module_website: "Site internet: "
+module_depends: "Dépendences: "
+module_not_found: "Le module \"{}\" est introuvable."
+module_already_exists: "Le module \"{}\" existe déjà."
+module_no_name: "Aucun nom de module spécifié."
+module_specify_name: "Merci de préciser le nom du module."
+module_specify_dir_name: "Merci de préciser le nom de dossier."
+module_specify_prefix_class: "Merci de préciser le préfixe de classe."
+module_specify_prefix_name: "Merci de préciser le préfixe de la variable \"_name\"."
+module_no_addon_path: "Aucun chemin de module trouvé dans le fichier de configuration."
+module_canceld: "Création de module annulée."
+
+# Model
+model_class: "Nom de la classe du modèle (CamelCase): "
+model_name: "Nom de \"_name\" du modèle (séparateur:\".\"): "
+model_description: "Description du modèle: "
+model_name_view: "Nom affiché dans les vues du modèle: "
+model_already_exist: "Un model \"{}\" existe déjà."
+
+# Model inherited
+model_inherited_class: "Nom de la classe du modèle hérité (CamelCase): "
+model_inherited_name: "Nom de \"_inherit_id\" du modèle hérité (séparateur:\".\"): "
+model_inherited_info_view: "XML ID des vues héritées (compléter pour ajouter à la vue ou laisser vide)"
+model_inherited_view_search: "XML ID vue recherche: "
+model_inherited_view_tree: "XML ID vue liste: "
+model_inherited_view_form: "XML ID vue formulaire: "
+model_inherited_already_exist: "Un model hérité \"{}\" existe déjà."

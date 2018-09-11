@@ -1,0 +1,10 @@
+        <!-- @@model_inherited_class@@ (tree) -->
+        <record model="ir.ui.view" id="@@model_inherited_prefix_view@@_tree_view">
+            <field name="name">@@model_inherited_name@@.tree</field>
+            <field name="model">@@model_inherited_name@@</field>
+            <field name="inherit_id" ref="@@model_inherited_view_tree@@" />
+            <field name="priority" eval="99"/>
+            <field name="arch" type="xml">
+
+            </field>
+        </record>

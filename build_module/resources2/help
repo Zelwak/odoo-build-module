@@ -1,0 +1,18 @@
+
+Build Odoo Module package
+-------------------------
+Usage:
+    build_module <command>
+
+Commands:
+- Before setting up
+    setup                               Setting up the package (addons path, language).
+
+- After setting up
+    update [argument]                   Update configuration of the package.
+                                            [argument (optionnable): "addons_path", "language"]
+    remove                              Delete configuration of the package.
+    create [argument1] [argument1]      Create odoo module or models.
+                                            [argument1 (optionnable): "module", "model", "model_inherited"]
+                                            [argument2 (optionnable): module name]
+    help                                Show help for commands.

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="0">
+	    <record model="ir.module.category" id="module_category_@@dir_name@@">
+	        <field name="name">Spécifique @@name@@</field>
+	        <field name="sequence">16</field>
+	    </record>
+	    <record id="group_@@dir_name@@_guest" model="res.groups">
+	        <field name="name">Invité @@name@@</field>
+	        <field name="comment">L'utilisateur a un accès limité aux données @@dir_name@@</field>
+	        <field name="category_id" ref="module_category_@@dir_name@@"/>
+	    </record>
+	    <record id="group_@@dir_name@@_member" model="res.groups">
+	        <field name="name">Employé @@name@@</field>
+	        <field name="comment">L'utilisateur a accès à certaines données @@dir_name@@</field>
+	        <field name="category_id" ref="module_category_@@dir_name@@"/>
+	        <field name="implied_ids" eval="[(4, ref('group_@@dir_name@@_guest')),(4, ref('base.group_user'))]"/>
+	    </record>
+	    <record id="group_@@dir_name@@_admin" model="res.groups">
+	        <field name="name">Admin @@name@@</field>
+	        <field name="comment">L'utilisateur a accès à toutes les données et au paramétrage @@dir_name@@</field>
+	        <field name="category_id" ref="module_category_@@dir_name@@"/>
+	        <field name="implied_ids" eval="[(4, ref('group_@@dir_name@@_member')),(4, ref('group_@@dir_name@@_guest')),(4, ref('base.group_user'))]"/>
+	        <!-- Note AM : un permanent @@dir_name@@ EST aussi un employé (et lui-seul) : conséquence, les autres n'autont pas le menu "suivi d'activité"  -->
+	        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+	    </record>
+	</data>
+	<data noupdate="0">
+	    <!-- Rôle spécifique pour cacher certains menus facilement dans l'interface et les repérer ensuite si besoin en interface,
+	    grace à ce rôle spécial, qui en fait n'est JAMAIS mis sur les utilisateurs @@dir_name@@ (caché de la vue spécifique User, où les droits sont choisis) -->
+	    <record id="group_@@dir_name@@_hide" model="res.groups">
+	        <field name="name">@@name@@ hiding feature</field>
+	    </record>
+	</data>
+</openerp>

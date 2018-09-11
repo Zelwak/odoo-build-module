@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- Top menu @@name@@ -->
+        <menuitem groups="group_@@dir_name@@_member" id="menu_@@dir_name@@_root" name="@@name@@" sequence="10"/>
+        <!-- menu (ne pas effacer cette ligne) -->
+    </data>
+</openerp>
