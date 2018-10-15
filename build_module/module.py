@@ -2,7 +2,6 @@
 
 import os
 import shutil
-import collections
 
 from . import consts
 from . import tools
@@ -228,15 +227,13 @@ class Module:
         with open('{}models/views/{}.xml'.format(module_path, content['model_inherited_prefix_view']), 'w') as file:
             file.write(view_content)
 
-
-
         self.make_element('{}models/{}.py'.format(module_path, content['model_inherited_prefix_view']), content)
         self.make_element('{}models/views/{}.xml'.format(module_path, content['model_inherited_prefix_view']), content)
 
         t.insert_into_file('{}models/__init__.py'.format(module_path), 'from . import {}'.format(content['model_inherited_prefix_view']))
         t.insert_into_file('{}__manifest__.py'.format(module_path), "\t\t'models/views/{}.xml',".format(content['model_inherited_prefix_view']), '# _models_views')
-        t.insert_into_file('{}security/ir.model.access.csv'.format(module_path), 'access_{}_{}_guest,access.{}.{}.guest,model_{}_{},group_{}_guest,1,0,0,0'.format(content['dir_name'], content['model_prefix_view'], content['prefix_name'], content['model_name'], content['dir_name'], content['model_prefix_view'], content['dir_name']))
-        t.insert_into_file('{}security/ir.model.access.csv'.format(module_path), 'access_{}_{}_admin,access.{}.{}.admin,model_{}_{},group_{}_admin,1,1,1,1'.format(content['dir_name'], content['model_prefix_view'], content['prefix_name'], content['model_name'], content['dir_name'], content['model_prefix_view'], content['dir_name']))
+        t.insert_into_file('{}security/ir.model.access.csv'.format(module_path), 'access_{}_guest,access.{}.guest,model_{},group_{}_guest,1,0,0,0'.format(content['model_inherited_prefix_view'], content['model_inherited_name'], content['model_inherited_prefix_view'], content['dir_name']))
+        t.insert_into_file('{}security/ir.model.access.csv'.format(module_path), 'access_{}_admin,access.{}.admin,model_{},group_{}_admin,1,1,1,1'.format(content['model_inherited_prefix_view'], content['model_inherited_name'], content['model_inherited_prefix_view'], content['dir_name']))
 
     def create_wizard(self, module_name):
         print('Wizard not available yet.')

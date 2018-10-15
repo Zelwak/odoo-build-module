@@ -1,6 +1,8 @@
 # MANIFEST.in
 
 include *.txt
+include *.md
 #recursive-include docs *.txt
 recursive-include build_module/languages *.yml
 recursive-include build_module/resources *
+recursive-include build_module/resources2 *
